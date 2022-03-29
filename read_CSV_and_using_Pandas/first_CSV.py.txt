@@ -1,0 +1,11 @@
+import csv
+
+with open("weather_data.csv", mode="r") as data_file:
+     data = csv.reader(data_file)
+     temperature = []
+     header = next(data)				#cut first row using next() method
+     for row in data:					#reading file by the rows
+         if row[1] != "temp":
+             temperature.append(int(row[1]))
+print(temperature)
+
