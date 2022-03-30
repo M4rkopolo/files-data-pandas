@@ -2,16 +2,22 @@
 read and write files txt, CSV, using "with open()" and pandas package and operatinge on data from files
 
 with open("./file.txt", mode="r") as x:
+
   list_of_names = names.readlines
 
 OR
 
 import pandas
+
 with open("./birthdays.csv", mode="r") as days:
+
   df = pandas.read_csv(days)	#reading csv
+  
   data = df.to_dict()			#saving data frame as a dict
+  
 
 >>>a = [1, 7, 2] #pandas Series data
+>>>
 >>>myvar = pd.Series(a)
 
 >>>mydataset = {
@@ -33,7 +39,9 @@ myvar = pandas.DataFrame(mydataset)
 „w+” – write and read data from the file
 
 „a+” – appending and reading data from the file 
+
 #----------------------
+
 close()	Closes the file
 
 detach()	Returns the separated raw stream from the buffer
